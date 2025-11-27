@@ -349,17 +349,29 @@ body {
     }
 
 }
-/* HEADER Y FOOTER FULL-WIDTH */
-.header .container,
-.footer .container {
+/* FIX PARA MÓVIL - HEADER/FOOTER */
+@media (max-width: 768px) {
+  .header .container,
+  .footer .container {
     max-width: 100% !important;
     width: 100% !important;
     margin: 0 !important;
-    padding: 0 5% !important;
-}
-
-.header,
-.footer {
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .header,
+  .footer {
     width: 100% !important;
     max-width: 100% !important;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Prevenir scroll horizontal */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
