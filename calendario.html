@@ -219,7 +219,7 @@
 </footer>
 
 <script>
-// PRUEBA SIMPLE - ELIMINAR DESPUÉS
+// MENÚ HAMBURGUESA CORREGIDO
 console.log('=== CALENDARIO DEBUG ===');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -230,20 +230,36 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Elementos encontrados:', {
         burger: !!burger,
-        menu: !!menu,
-        burgerHTML: burger?.outerHTML,
-        menuHTML: menu?.outerHTML
+        menu: !!menu
     });
     
-    // EVENTO SIMPLE DIRECTO
-    burger.onclick = function() {
+    // EVENTO CORREGIDO - usar classList en lugar de style.display
+    burger.addEventListener('click', function() {
         console.log('🎯 CLICK EN BURGER DETECTADO!');
-        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-    };
+        
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!isExpanded));
+        
+        // CORREGIDO: usar classList.toggle con 'menu--open'
+        menu.classList.toggle('menu--open');
+        
+        console.log('Menú abierto:', menu.classList.contains('menu--open'));
+    });
+
+    // Cerrar menú al hacer clic en enlaces (móvil)
+    document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 600) {
+                menu.classList.remove('menu--open');
+                burger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
 });
 </script>
 </body>
 </html>
+
 
 
 
