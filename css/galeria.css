@@ -1,174 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Imágenes</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #333;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: #333;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-        }
+.gallery-grid {
+    display: grid;
+    /* Crea columnas automáticas que miden mínimo 260px y máximo 1 fracción del espacio */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
 
-        .page-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 30px 20px;
-            background-color: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
+.gallery-grid img {
+    width: 100%;
+    height: 300px;       /* Altura fija para todas las imágenes */
+    object-fit: cover;   /* Recorta la imagen para que no se deforme al forzar la altura */
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: transform .3s ease;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 10px;
-            color: #2c3e50;
-            font-size: 2.5rem;
-        }
-
-        .subtitle {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #7f8c8d;
-            font-size: 1.1rem;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            justify-items: center;
-        }
-
-        .image-container {
-            width: 100%;
-            max-width: 300px;
-            height: 300px;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s ease;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .image-container:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .image-container:hover img {
-            transform: scale(1.05);
-        }
-
-        .image-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: white;
-            padding: 15px 10px 10px;
-            font-size: 1.1rem;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .image-container:hover .image-title {
-            transform: translateY(0);
-        }
-
-        .image-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .instructions {
-            text-align: center;
-            margin-top: 40px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-
-        @media (max-width: 768px) {
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 20px;
-            }
-            
-            .image-container {
-                max-width: 100%;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .page-section {
-                padding: 20px 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="page-section">
-        <h1>Galería de Imágenes</h1>
-        <p class="subtitle">Todas las imágenes tienen el mismo tamaño en cualquier dispositivo</p>
-        
-        <div class="gallery-grid">
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Paisaje montañoso">
-                <div class="image-title">Montañas</div>
-            </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05" alt="Bosque nevado">
-                <div class="image-title">Bosque Invernal</div>
-            </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Paisaje estrellado">
-                <div class="image-title">Cielo Nocturno</div>
-            </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Lago y montañas">
-                <div class="image-title">Lago Sereno</div>
-            </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Bosque verde">
-                <div class="image-title">Bosque Encantado</div>
-            </div>
-            <div class="image-container">
-                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff" alt="Atardecer en la playa">
-                <div class="image-title">Atardecer Dorado</div>
-            </div>
-        </div>
-        
-        <div class="instructions">
-            <p><strong>Nota:</strong> Todas las imágenes mantienen la misma proporción (300x300px) tanto en dispositivos móviles como en PC.</p>
-        </div>
-    </div>
-</body>
-</html>
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
