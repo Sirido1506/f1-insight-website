@@ -207,7 +207,32 @@
 </footer>
 
 <script>
-(function(){const b=document.querySelector('.burger');const m=document.querySelector('.menu');b.addEventListener('click',()=>{b.classList.toggle('is-open');m.classList.toggle('is-open');});})();
+// Menú hamburguesa ESTANDARIZADO
+(function () {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+
+  burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('menu--open');
+    
+    // Prevenir scroll cuando el menú está abierto
+    document.body.style.overflow = menu.classList.contains('menu--open') ? 'hidden' : '';
+  });
+
+  // Cerrar menú al hacer clic en enlaces (móvil)
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 600) {
+        menu.classList.remove('menu--open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = ''; // Restaurar scroll
+      }
+    });
+  });
+})();
 </script>
 </body>
+
 </html>
