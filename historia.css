@@ -1,0 +1,97 @@
+/* ======== FONDO GENERAL ======== */
+body {
+    background: #ffffff;
+    color: #222;
+}
+
+/* ======== CONTENEDOR GENERAL ======== */
+.page-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    color: #222;
+    position: relative;
+    z-index: 2;
+}
+
+/* ======== TÍTULO PRINCIPAL ======== */
+.page-section h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 25px;
+    color: #000;
+}
+
+.page-section h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff0000, #b30000);
+    border-radius: 3px;
+    animation: pulse-red 3s infinite ease-in-out;
+}
+
+@keyframes pulse-red {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* ======== TIMELINE ======== */
+.timeline {
+    margin-top: 20px;
+    border-left: 3px solid #ff0000;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Bloque de cada época */
+.timeline-item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+/* Punto rojo */
+.timeline-item::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    left: -33px;
+    top: 5px;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Tarjeta de contenido */
+.timeline-card {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* Titulares */
+.timeline-card h2 {
+    color: #000;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+/* Párrafos */
+.timeline-card p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}

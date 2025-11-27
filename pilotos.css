@@ -1,0 +1,30 @@
+.page-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.drivers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.driver {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.driver img {
+    width: 70%;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+
+.driver h3 {
+    margin-bottom: 6px;
+}

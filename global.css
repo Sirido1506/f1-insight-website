@@ -1,0 +1,327 @@
+/* global.css */
+
+/* Tipografía y cuerpo */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #111;
+  background: #f7f7f7;
+  line-height: 1.45;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  background: #111;
+  color: #fff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Navegación */
+.nav .menu {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav .menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav .menu li a:hover {
+  color: #e10600;
+}
+
+/* Botón pequeño */
+.btn-small {
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #e10600;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Burger - solo móvil */
+.burger {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.burger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  margin: 4px 0;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 18px 0;
+  margin-top: 30px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  color: #fff;
+  margin-left: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .nav .menu {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+  }
+
+  .menu.menu--open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 6%;
+    background: #111;
+    padding: 12px;
+    border-radius: 6px;
+    gap: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+/* ===== TARJETAS - Estilos para todas las páginas ===== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+  padding: 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(16,16,16,0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(16,16,16,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  padding: 20px 20px 8px;
+  font-size: 1.3rem;
+  color: #111;
+}
+
+.card p {
+  padding: 0 20px 15px;
+  color: #555;
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card-link {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 0 20px 20px;
+  text-decoration: none;
+  color: #e10600;
+  font-weight: 600;
+  border: 1px solid #e10600;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.card-link:hover {
+  background: #e10600;
+  color: #fff;
+}
+
+/* Responsive para tarjetas */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+/* ===== ESTILOS GLOBALES MEJORADOS ===== */
+
+/* Page Section Base */
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #333;
+}
+
+/* Hero Section Global */
+.hero {
+    background-image: url("../img/hero.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 52vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(17,17,17,0.45), rgba(17,17,17,0.65));
+    padding: 40px 0;
+}
+
+.hero-content {
+    color: #fff;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 18px;
+    opacity: 0.95;
+    font-size: 1rem;
+    max-width: 70ch;
+}
+
+/* Botones Globales */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background: #e10600;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #c10500;
+    transform: translateY(-2px);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.28);
+}
+
+.btn.ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Mejoras Responsive Globales */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+    
+    .btn {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

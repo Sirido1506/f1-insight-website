@@ -1,0 +1,32 @@
+.page-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.calendar-table th {
+    background: #d62828;
+    color: #fff;
+    padding: 14px;
+    font-size: 1rem;
+}
+
+.calendar-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-table tr:hover {
+    background: #fafafa;
+}

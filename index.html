@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F1 Insight – Todo sobre la Fórmula 1</title>
+
+  <!-- CSS específico para esta página -->
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+
+<!-- Search Console verification -->
+<meta name="google-site-verification" content="TU_CODIGO_DE_VERIFICACION">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">F1 Insight</a>
+
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="historia.html">Historia</a></li>
+          <li><a href="equipos.html">Equipos</a></li>
+          <li><a href="pilotos.html">Pilotos</a></li>
+          <li><a href="circuitos.html">Circuitos</a></li>
+          <li><a href="tecnologia.html">Tecnología</a></li>
+          <li><a href="reglamento.html">Reglamento</a></li>
+          <li><a href="calendario.html">Calendario</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="contacto.html" class="btn-small">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- botón hamburguesa simple para móvil -->
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-content">
+        <h1>Bienvenido a F1 Insight</h1>
+        <p>Explora la historia, los equipos, los pilotos, los circuitos y la tecnología que hacen a la Fórmula 1 el mayor espectáculo del automovilismo.</p>
+        <div class="hero-cta">
+          <a href="historia.html" class="btn">Conocer la historia</a>
+          <a href="calendario.html" class="btn ghost">Ver calendario</a>
+        </div>
+      </div>
+    </div>
+    <!-- imagen de fondo como recurso: /img/hero.webp -->
+  </section>
+
+  <!-- ¿Qué encontrarás aquí? -->
+  <section class="introduccion container">
+    <h2>Un sitio para conocer la Fórmula 1 de forma simple y completa</h2><br>
+    <p>F1 Insight reúne información organizada y accesible sobre la Fórmula 1: equipos, pilotos, trazados emblemáticos, tecnología y reglamento para entender cada carrera.</p><br>
+  </section>
+
+  <!-- TARJETAS DE ACCESO RÁPIDO Equipos -->
+  <section class="cards container">
+    <article class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsOQb0Oo8XboSWd6btJQLBRWX35S6kl_j0PWgEIPYyzvo8mJLm4WLg6Ew4soYMn92ZVs&usqp=CAU" alt="Equipos de F1">
+      <h3>Equipos</h3>
+      <p>Perfiles de las escuderías, historia breve y plantillas actuales.</p>
+      <a href="equipos.html" class="card-link">Ver equipos →</a>
+    </article>
+    <!-- Pilotos -->
+    <article class="card">
+      <img src="https://www.record.com.mx/sites/default/files/articulos/2023/12/30/f1_2024.jpg" alt="Pilotos de F1">
+      <h3>Pilotos</h3>
+      <p>Biografías, estadísticas y trayectoria de los protagonistas.</p>
+      <a href="pilotos.html" class="card-link">Ver pilotos →</a>
+    </article>
+    <!-- Circuitos -->
+    <article class="card">
+      <img src="https://e01-elmundo.uecdn.es/em/deportes/f1/2025/circuitos/australia.jpg" alt="Circuitos de F1">
+      <h3>Circuitos</h3>
+      <p>Características de los trazados más emblemáticos del calendario.</p>
+      <a href="circuitos.html" class="card-link">Ver circuitos →</a>
+    </article>
+    <!-- Tecnología -->
+    <article class="card">
+      <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2014/08/20/140820165922_f1_promos_auto_ilustracion_624x351_thinstock.jpg.webp" alt="Tecnología en F1">
+      <h3>Tecnología</h3>
+      <p>Explicación clara sobre aerodinámica, ERS, DRS y más.</p>
+      <a href="tecnologia.html" class="card-link">Ver tecnología →</a>
+    </article>
+  </section>
+
+  <!-- Últimas novedades (texto breve, estático) -->
+  <section class="novedades container">
+    <h2>La temporada en breve</h2>
+    <p>Reglamento, desarrollo aerodinámico y estrategias hacen que cada temporada sea única. Aquí encontrarás artículos y explicaciones para entender las decisiones técnicas y deportivas.</p>
+    <a class="btn" href="calendario.html">Calendario completo</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 F1 Insight</p>
+      <nav class="footer-nav" aria-label="Enlaces de pie">
+        <a href="contacto.html">Contacto</a>
+        <a href="historia.html">Historia</a>
+        <a href="galeria.html">Galería</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Minimal JS para el menú hamburguesa -->
+  <script>
+    (function () {
+      const burger = document.querySelector('.burger');
+      const nav = document.querySelector('.nav');
+      const menu = document.querySelector('.menu');
+
+      burger.addEventListener('click', () => {
+        const expanded = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('menu--open');
+      });
+    })();
+  </script>
+<script>
+// Medición de tiempo de carga
+window.addEventListener('load', function() {
+  if (performance.getEntriesByType("navigation").length > 0) {
+    const loadTime = performance.getEntriesByType("navigation")[0].domContentLoadedEventEnd;
+    console.log('Tiempo de carga DOM:', loadTime + 'ms');
+    
+    if (loadTime > 3000) {
+      console.warn('⚠️ El tiempo de carga supera los 3 segundos');
+      // Optimizar: comprimir imágenes, minificar CSS/JS, usar CDN
+    }
+  }
+});
+</script>
+</body>
+</html>

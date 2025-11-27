@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contacto – F1 Insight</title>
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/contacto.css">
+<link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">F1 Insight</a>
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="pilotos.html">Pilotos</a></li>
+        <li><a href="circuitos.html">Circuitos</a></li>
+        <li><a href="tecnologia.html">Tecnología</a></li>
+        <li><a href="reglamento.html">Reglamento</a></li>
+        <li><a href="calendario.html">Calendario</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html" class="btn-small">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="burger">
+      <span class="burger-line"></span><span class="burger-line"></span><span class="burger-line"></span>
+    </button>
+  </div>
+</header>
+
+<main class="page-section">
+
+    <h1>Contacto</h1>
+    <p>Si deseas comunicarte, completa el siguiente formulario.</p>
+
+    <form>
+        <input type="text" placeholder="Nombre completo" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="6" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© 2025 F1 Insight</p>
+    <nav class="footer-nav">
+      <a href="contacto.html">Contacto</a>
+      <a href="historia.html">Historia</a>
+      <a href="galeria.html">Galería</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){const b=document.querySelector('.burger');const m=document.querySelector('.menu');b.addEventListener('click',()=>{const e=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!e));m.classList.toggle('menu--open');});})();
+</script>
+
+</body>
+</html>
