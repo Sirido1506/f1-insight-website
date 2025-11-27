@@ -1,64 +1,81 @@
+/* CONTENIDO PRINCIPAL - ANCHO NORMAL PARA PC */
 .page-section {
-    max-width: 1000px;
+    max-width: 1200px;    /* ← Ancho generoso para PC */
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 60px 40px;   /* ← Más padding para PC */
     color: #333;
 }
 
 .calendar-table {
     width: 100%;
+    max-width: 100%;
     border-collapse: collapse;
-    margin-top: 25px;
+    margin-top: 30px;
     background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border-radius: 10px;
     overflow: hidden;
+    font-size: 1rem;
 }
 
 .calendar-table th {
     background: #e10600;
     color: #fff;
-    padding: 14px;
-    font-size: 1rem;
+    padding: 16px 20px;   /* ← Más espacio en PC */
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 .calendar-table td {
-    padding: 12px;
+    padding: 14px 20px;   /* ← Más espacio en PC */
     border-bottom: 1px solid #eee;
+    text-align: left;
 }
 
 .calendar-table tr:hover {
-    background: #fafafa;
+    background: #f8f8f8;
 }
 
-/* HEADER/FOOTER FULL-WIDTH */
+/* HEADER/FOOTER FULL-WIDTH PERO CONTENIDO CENTRADO */
 .header,
 .footer {
     width: 100vw !important;
     max-width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
-    margin-right: calc(-50vw + 50%) !important;
-    left: 0 !important;
-    right: 0 !important;
     position: relative !important;
 }
 
 .header .container,
 .footer .container {
-    max-width: 1100px !important;
+    max-width: 1200px !important;  /* ← Mismo ancho que page-section */
     width: 90% !important;
     margin: 0 auto !important;
     padding: 14px 0 !important;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - Solo ajustes para móvil */
 @media (max-width: 768px) {
+    .page-section {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
     .calendar-table {
         font-size: 0.9rem;
     }
     
     .calendar-table th,
     .calendar-table td {
-        padding: 10px 8px;
+        padding: 12px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-section {
+        padding: 20px 15px;
+    }
+    
+    .calendar-table th,
+    .calendar-table td {
+        padding: 10px 12px;
     }
 }
