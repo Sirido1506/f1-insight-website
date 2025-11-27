@@ -25,7 +25,7 @@
   <div class="container header-inner">
     <a class="logo" href="index.html">F1 Insight</a>
     <nav class="nav">
-      <ul class="menu">
+      <ul class="menu" id="menu">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="historia.html">Historia</a></li>
         <li><a href="equipos.html">Equipos</a></li>
@@ -47,37 +47,106 @@
 </header>
 
 <main class="page-section">
+    <div class="container">
+        <h1>Reglamento General de la Fórmula 1</h1>
+        <p class="page-intro">La Federación Internacional del Automóvil (FIA) establece tres conjuntos de normativas —Deportivas, Técnicas y Financieras— que rigen la competición, los monoplazas y la gestión de los equipos para garantizar la seguridad, la equidad y la sostenibilidad.</p>
 
-    <h1>Reglamento General de la Fórmula 1</h1>
-    <p>La Federación Internacional del Automóvil (FIA) establece tres conjuntos de normativas —Deportivas, Técnicas y Financieras— que rigen la competición, los monoplazas y la gestión de los equipos para garantizar la seguridad, la equidad y la sostenibilidad.</p>
+        <div class="reglamento-grid">
+            <!-- Reglamento Deportivo -->
+            <section class="reglamento-category">
+                <div class="category-header">
+                    <h2>Reglamento Deportivo</h2>
+                    <span class="category-icon">🏁</span>
+                </div>
+                <ul class="rules-list">
+                    <li class="rule-item">
+                        <strong>Formato del Gran Premio:</strong> El fin de semana se compone de sesiones de Prácticas Libres (FP1, FP2, FP3), una sesión de Clasificación (Q1, Q2, Q3) y la Carrera principal del domingo.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Clasificación (Q1, Q2, Q3):</strong> Se eliminan los 5 coches más lentos en Q1 y Q2, dejando a los 10 más rápidos para luchar por la <em>Pole Position</em> en Q3.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Distancia de Carrera:</strong> La carrera debe cubrir una distancia mínima de 305 kilómetros (260 km en Mónaco) y no debe exceder las dos horas.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Sistema de Puntuación:</strong> Los puntos se otorgan a los 10 primeros clasificados (25-18-15-12-10-8-6-4-2-1). Se otorga un punto adicional al piloto que marque la vuelta rápida si finaliza entre los diez primeros.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Uso de Neumáticos:</strong> Los pilotos deben utilizar al menos dos compuestos diferentes de neumáticos de seco (duro, medio o blando) durante la carrera, a menos que la pista sea declarada "mojada".
+                    </li>
+                    <li class="rule-item">
+                        <strong>Pit Lane:</strong> Existe un límite de velocidad obligatorio en el Pit Lane (generalmente 80 km/h) que debe respetarse para la seguridad del personal de los equipos.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Banderas:</strong> Los comisarios utilizan un sistema de banderas (amarilla, roja, azul, a cuadros, etc.) para comunicar condiciones y peligros en la pista a los pilotos.
+                    </li>
+                </ul>
+            </section>
 
-    <h2>Reglamento Deportivo</h2>
-    <ul class="rules-list">
-        <li><strong>Formato del Gran Premio:</strong> El fin de semana se compone de sesiones de Prácticas Libres (FP1, FP2, FP3), una sesión de Clasificación (Q1, Q2, Q3) y la Carrera principal del domingo.</li>
-        <li><strong>Clasificación (Q1, Q2, Q3):</strong> Se eliminan los 5 coches más lentos en Q1 y Q2, dejando a los 10 más rápidos para luchar por la *Pole Position* en Q3.</li>
-        <li><strong>Distancia de Carrera:</strong> La carrera debe cubrir una distancia mínima de 305 kilómetros (260 km en Mónaco) y no debe exceder las dos horas.</li>
-        <li><strong>Sistema de Puntuación:</strong> Los puntos se otorgan a los 10 primeros clasificados (25-18-15-12-10-8-6-4-2-1). Se otorga un punto adicional al piloto que marque la vuelta rápida si finaliza entre los diez primeros.</li>
-        <li><strong>Uso de Neumáticos:</strong> Los pilotos deben utilizar al menos dos compuestos diferentes de neumáticos de seco (duro, medio o blando) durante la carrera, a menos que la pista sea declarada "mojada".</li>
-        <li><strong>Pit Lane:</strong> Existe un límite de velocidad obligatorio en el Pit Lane (generalmente 80 km/h) que debe respetarse para la seguridad del personal de los equipos.</li>
-        <li><strong>Banderas:</strong> Los comisarios utilizan un sistema de banderas (amarilla, roja, azul, a cuadros, etc.) para comunicar condiciones y peligros en la pista a los pilotos.</li>
-    </ul>
+            <!-- Reglamento Técnico -->
+            <section class="reglamento-category">
+                <div class="category-header">
+                    <h2>Reglamento Técnico</h2>
+                    <span class="category-icon">🔧</span>
+                </div>
+                <ul class="rules-list">
+                    <li class="rule-item">
+                        <strong>Unidad de Potencia (Motor):</strong> Los coches utilizan unidades de potencia V6 Turbo híbridas. Cada piloto tiene un límite estricto de componentes de motor (como ICE, turbo, MGU-H, MGU-K) que puede usar por temporada. Exceder este límite conlleva penalizaciones de parrilla.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Peso Mínimo:</strong> El peso mínimo del coche con el piloto a bordo está fijado por la FIA y se revisa anualmente (actualmente en torno a los 798 kg).
+                    </li>
+                    <li class="rule-item">
+                        <strong>Dimensiones del Chasis:</strong> Existen límites estrictos en el tamaño, ancho y altura del monoplaza para asegurar que todos compiten en condiciones similares y que cumplen con los estándares de seguridad.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Aerodinámica:</strong> Las reglas controlan de cerca el diseño de los alerones y el suelo del coche para limitar la carga aerodinámica y el temido <em>porpoising</em>. El sistema <strong>DRS</strong> (Drag Reduction System) está permitido solo en zonas designadas para facilitar los adelantamientos.
+                    </li>
+                    <li class="rule-item">
+                        <strong>Seguridad:</strong> El coche debe incorporar elementos de seguridad obligatorios como la estructura protectora 'Halo' sobre la cabina, celdas de combustible resistentes y pruebas de impacto rigurosas.
+                    </li>
+                </ul>
+            </section>
 
-    <h2>Reglamento Técnico</h2>
-    <ul class="rules-list">
-        <li><strong>Unidad de Potencia (Motor):</strong> Los coches utilizan unidades de potencia V6 Turbo híbridas. Cada piloto tiene un límite estricto de componentes de motor (como ICE, turbo, MGU-H, MGU-K) que puede usar por temporada. Exceder este límite conlleva penalizaciones de parrilla.</li>
-        <li><strong>Peso Mínimo:</strong> El peso mínimo del coche con el piloto a bordo está fijado por la FIA y se revisa anualmente (actualmente en torno a los 798 kg).</li>
-        <li><strong>Dimensiones del Chasis:</strong> Existen límites estrictos en el tamaño, ancho y altura del monoplaza para asegurar que todos compiten en condiciones similares y que cumplen con los estándares de seguridad.</li>
-        <li><strong>Aerodinámica:</strong> Las reglas controlan de cerca el diseño de los alerones y el suelo del coche para limitar la carga aerodinámica y el temido *porpoising*. El sistema <strong>DRS</strong> (Drag Reduction System) está permitido solo en zonas designadas para facilitar los adelantamientos.</li>
-        <li><strong>Seguridad:</strong> El coche debe incorporar elementos de seguridad obligatorios como la estructura protectora 'Halo' sobre la cabina, celdas de combustible resistentes y pruebas de impacto rigurosas.</li>
-    </ul>
-    
-    <h2>Reglamento Financiero (Límite de Costes)</h2>
-    <ul class="rules-list">
-        <li><strong>Límite Presupuestario (Budget Cap):</strong> La FIA establece un límite estricto en la cantidad total de dinero que un equipo de Fórmula 1 puede gastar en el rendimiento de sus coches en una temporada (excluyendo gastos como los salarios de los pilotos principales, los tres ejecutivos mejor pagados, y gastos de marketing/viajes).</li>
-        <li><strong>Sanciones por Incumplimiento:</strong> Las infracciones al límite de costes, incluso si son leves, conllevan severas sanciones que pueden incluir multas económicas, pérdida de puntos en los campeonatos o restricciones en el tiempo de desarrollo aerodinámico (túnel de viento/CFD).</li>
-        <li><strong>Objetivo:</strong> Este reglamento busca promover una mayor equidad competitiva y garantizar la sostenibilidad financiera a largo plazo de todos los equipos.</li>
-    </ul>
+            <!-- Reglamento Financiero -->
+            <section class="reglamento-category">
+                <div class="category-header">
+                    <h2>Reglamento Financiero</h2>
+                    <span class="category-icon">💰</span>
+                </div>
+                <ul class="rules-list">
+                    <li class="rule-item">
+                        <strong>Límite Presupuestario (Budget Cap):</strong> La FIA establece un límite estricto en la cantidad total de dinero que un equipo de Fórmula 1 puede gastar en el rendimiento de sus coches en una temporada (excluyendo gastos como los salarios de los pilotos principales, los tres ejecutivos mejor pagados, y gastos de marketing/viajes).
+                    </li>
+                    <li class="rule-item">
+                        <strong>Sanciones por Incumplimiento:</strong> Las infracciones al límite de costes, incluso si son leves, conllevan severas sanciones que pueden incluir multas económicas, pérdida de puntos en los campeonatos o restricciones en el tiempo de desarrollo aerodinámico (túnel de viento/CFD).
+                    </li>
+                    <li class="rule-item">
+                        <strong>Objetivo:</strong> Este reglamento busca promover una mayor equidad competitiva y garantizar la sostenibilidad financiera a largo plazo de todos los equipos.
+                    </li>
+                </ul>
+            </section>
+        </div>
 
+        <!-- Información adicional -->
+        <section class="additional-info">
+            <h2>¿Sabías que...?</h2>
+            <div class="fun-facts">
+                <div class="fun-fact">
+                    <h3>🚩 Sistema de Banderas</h3>
+                    <p>Existen más de 10 banderas diferentes que los comisarios utilizan para comunicarse con los pilotos durante la carrera.</p>
+                </div>
+                <div class="fun-fact">
+                    <h3>⏱️ Parada en Boxes</h3>
+                    <p>Los equipos de F1 pueden realizar un cambio completo de neumáticos en menos de 2 segundos.</p>
+                </div>
+                <div class="fun-fact">
+                    <h3>📊 Límite de Costes</h3>
+                    <p>El budget cap para 2024 es de 135 millones de dólares por equipo, excluyendo ciertos gastos.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
 
 <footer class="footer">
@@ -91,7 +160,7 @@
   </div>
 </footer>
 
-  <script>
+<script>
 // MENÚ HAMBURGUESA ESTANDARIZADO
 (function () {
   const burger = document.querySelector('.burger');
@@ -102,7 +171,7 @@
     const expanded = burger.getAttribute('aria-expanded') === 'true';
     burger.setAttribute('aria-expanded', String(!expanded));
     menu.classList.toggle('menu--open');
-    body.classList.toggle('menu-open'); // ← Para el fondo oscuro
+    body.classList.toggle('menu-open');
   });
 
   // Cerrar menú al hacer clic en enlaces
@@ -129,7 +198,4 @@
 })();
 </script>
 </body>
-
 </html>
-
-
