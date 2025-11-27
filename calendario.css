@@ -12,7 +12,7 @@
 }
 
 .calendar-table {
-    width: 95%;
+    width: 9%;
     margin: 20px auto;
     border-collapse: collapse;
     background: #fff;
@@ -72,3 +72,4 @@
         padding: 8px 6px;
     }
 }
+
