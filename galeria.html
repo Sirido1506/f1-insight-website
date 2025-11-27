@@ -69,7 +69,44 @@
 </footer>
 
 <script>
-(function(){const b=document.querySelector('.burger');const m=document.querySelector('.menu');b.addEventListener('click',()=>{b.classList.toggle('is-open');m.classList.toggle('is-open');});})();
+  <script>
+// MENÚ HAMBURGUESA ESTANDARIZADO
+(function () {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu');
+  const body = document.querySelector('body');
+
+  burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true';
+    burger.setAttribute('aria-expanded', String(!expanded));
+    menu.classList.toggle('menu--open');
+    body.classList.toggle('menu-open'); // ← Para el fondo oscuro
+  });
+
+  // Cerrar menú al hacer clic en enlaces
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 600) {
+        menu.classList.remove('menu--open');
+        burger.setAttribute('aria-expanded', 'false');
+        body.classList.remove('menu-open');
+      }
+    });
+  });
+
+  // Cerrar menú al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 600 && menu.classList.contains('menu--open')) {
+      if (!e.target.closest('.nav') && !e.target.closest('.burger')) {
+        menu.classList.remove('menu--open');
+        burger.setAttribute('aria-expanded', 'false');
+        body.classList.remove('menu-open');
+      }
+    }
+  });
+})();
+</script>
 </script>
 </body>
+
 </html>
