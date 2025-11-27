@@ -1,46 +1,37 @@
-/* RESET COMPLETO CALENDARIO */
-* {
-    box-sizing: border-box;
-}
-
 .page-section {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
     color: #333;
 }
 
 .calendar-table {
     width: 100%;
-    max-width: 100%
-    margin: 20px auto;
     border-collapse: collapse;
+    margin-top: 25px;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    border-radius: 10px;
     overflow: hidden;
-    font-size: 0.9rem;
 }
 
 .calendar-table th {
     background: #e10600;
     color: #fff;
-    padding: 12px 8px;
-    font-size: 0.85rem;
-    text-align: left;
+    padding: 14px;
+    font-size: 1rem;
 }
 
 .calendar-table td {
-    padding: 10px 8px;
+    padding: 12px;
     border-bottom: 1px solid #eee;
 }
 
 .calendar-table tr:hover {
-    background: #f8f8f8;
+    background: #fafafa;
 }
 
-/* HEADER Y FOOTER FULL-WIDTH PARA CALENDARIO */
+/* HEADER/FOOTER FULL-WIDTH */
 .header,
 .footer {
     width: 100vw !important;
@@ -54,61 +45,20 @@
 
 .header .container,
 .footer .container {
-    max-width: 100% !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 20px !important;
+    max-width: 1100px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 14px 0 !important;
 }
 
-/* TABLA MÁS COMPACTA */
-.page-section {
-    max-width: 100%;
-    margin: 0;
-    padding: 30px 20px;
-    color: #333;
-    box-sizing: border-box;
-}
-
-.calendar-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    font-size: 0.9rem;
-}
-
-.calendar-table th {
-    background: #e10600;
-    color: #fff;
-    padding: 12px 8px;
-    font-size: 0.85rem;
-    text-align: left;
-}
-
-.calendar-table td {
-    padding: 10px 8px;
-    border-bottom: 1px solid #eee;
-    text-align: left;
-}
-
-.calendar-table tr:hover {
-    background: #f8f8f8;
-}
-
-/* RESPONSIVE MEJORADO */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .calendar-table {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     
     .calendar-table th,
     .calendar-table td {
-        padding: 8px 6px;
+        padding: 10px 8px;
     }
 }
-
-
-
