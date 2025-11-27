@@ -219,33 +219,32 @@
 </footer>
 
 <script>
-// MENÚ HAMBURGUESA - VERSIÓN SIMPLE Y FUNCIONAL
-(function () {
-  const burger = document.querySelector('.burger');
-  const menu = document.querySelector('.menu');
-  
-  console.log('JavaScript cargado - Burger:', !!burger, 'Menu:', !!menu);
-  
-  burger.addEventListener('click', function() {
-    console.log('¡Botón clickeado!');
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', String(!isExpanded));
-    menu.classList.toggle('menu--open');
-  });
+// PRUEBA SIMPLE - ELIMINAR DESPUÉS
+console.log('=== CALENDARIO DEBUG ===');
 
-  // Cerrar menú al hacer clic en enlaces (móvil)
-  document.querySelectorAll('.menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 600) {
-        menu.classList.remove('menu--open');
-        burger.setAttribute('aria-expanded', 'false');
-      }
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM cargado');
+    
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu');
+    
+    console.log('Elementos encontrados:', {
+        burger: !!burger,
+        menu: !!menu,
+        burgerHTML: burger?.outerHTML,
+        menuHTML: menu?.outerHTML
     });
-  });
-})();
+    
+    // EVENTO SIMPLE DIRECTO
+    burger.onclick = function() {
+        console.log('🎯 CLICK EN BURGER DETECTADO!');
+        menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    };
+});
 </script>
 </body>
 </html>
+
 
 
 
