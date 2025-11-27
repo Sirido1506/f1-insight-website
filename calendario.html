@@ -230,30 +230,14 @@
 
 <script>
 // MENÚ HAMBURGUESA CORREGIDO
-console.log('=== CALENDARIO DEBUG ===');
-
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM cargado');
-    
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.menu');
     
-    console.log('Elementos encontrados:', {
-        burger: !!burger,
-        menu: !!menu
-    });
-    
-    // EVENTO CORREGIDO - usar classList en lugar de style.display
     burger.addEventListener('click', function() {
-        console.log('🎯 CLICK EN BURGER DETECTADO!');
-        
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
         this.setAttribute('aria-expanded', String(!isExpanded));
-        
-        // CORREGIDO: usar classList.toggle con 'menu--open'
         menu.classList.toggle('menu--open');
-        
-        console.log('Menú abierto:', menu.classList.contains('menu--open'));
     });
 
     // Cerrar menú al hacer clic en enlaces (móvil)
@@ -267,8 +251,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+  
 </body>
 </html>
+
 
 
 
