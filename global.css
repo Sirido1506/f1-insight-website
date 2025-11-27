@@ -349,3 +349,17 @@ body {
     }
 
 }
+/* HEADER Y FOOTER FULL-WIDTH */
+.header .container,
+.footer .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 5% !important;
+}
+
+.header,
+.footer {
+    width: 100% !important;
+    max-width: 100% !important;
+}
