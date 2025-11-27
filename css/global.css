@@ -99,69 +99,7 @@ body {
   margin-left: 14px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .header-inner {
-    gap: 12px;
-  }
-
-  .nav .menu {
-    display: none;
-  }
-
-  .burger {
-    display: inline-block;
-  }
-
-  .menu.menu--open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 6%;
-    background: #111;
-    padding: 12px;
-    border-radius: 6px;
-    gap: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-     z-index: 9999 !important;
-  }
-  /* PREVENIR QUE EL CONTENIDO TAPE EL MENÚ */
-@media (max-width: 600px) {
-    .nav .menu {
-        display: none;
-    }
-    
-    .burger {
-        display: inline-block;
-        z-index: 10000; /* ← Burger por encima de todo */
-    }
-    
-    /* Cuando el menú está abierto, oscurecer el fondo */
-    body.menu-open {
-        overflow: hidden;
-    }
-    
-    body.menu-open::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.5);
-        z-index: 9998;
-    }
-}
-
-  .footer-inner {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-}
-/* ===== TARJETAS - Estilos para todas las páginas ===== */
-
+/* ===== TARJETAS ===== */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -224,23 +162,7 @@ body {
   color: #fff;
 }
 
-/* Responsive para tarjetas */
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-}
 /* ===== ESTILOS GLOBALES MEJORADOS ===== */
-
-/* Page Section Base */
 .page-section {
     max-width: 1100px;
     margin: 0 auto;
@@ -322,7 +244,14 @@ body {
     border: 0;
 }
 
-/* Mejoras Responsive Globales */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 1.8rem;
@@ -336,6 +265,59 @@ body {
         margin-right: 0;
         margin-bottom: 10px;
     }
+}
+
+@media (max-width: 600px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .nav .menu {
+    display: none;
+  }
+
+  .burger {
+    display: inline-block;
+    z-index: 10000;
+  }
+
+  .menu.menu--open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+    min-width: 200px;
+  }
+
+  /* Fondo oscuro cuando el menú está abierto */
+  body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 9998;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -352,5 +334,4 @@ body {
         width: 100%;
         text-align: center;
     }
-
 }
