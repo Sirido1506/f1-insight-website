@@ -29,4 +29,9 @@
 
 .calendar-table tr:hover {
     background: #fafafa;
+
+}
+.header .container,
+.footer .container {
+    max-width: none !important; /* ← Esto arregla header/footer */
 }
