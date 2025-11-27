@@ -1,44 +1,91 @@
 .page-section {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 50px 20px;
+    max-width: 100%;
+    margin: 0;
+    padding: 30px 20px;
     color: #333;
+    box-sizing: border-box;
 }
 
 .calendar-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 25px;
+    margin-top: 20px;
     background: #fff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
     overflow: hidden;
+    font-size: 0.9rem;
 }
 
 .calendar-table th {
-    background: #d62828;
+    background: #e10600;
     color: #fff;
-    padding: 14px;
-    font-size: 1rem;
+    padding: 12px 8px;
+    font-size: 0.85rem;
+    text-align: left;
 }
 
 .calendar-table td {
-    padding: 12px;
+    padding: 10px 8px;
     border-bottom: 1px solid #eee;
+    text-align: left;
 }
 
 .calendar-table tr:hover {
-    background: #fafafa;
+    background: #f8f8f8;
 }
 
-/* RESPONSIVE para tabla */
-@media (max-width: 600px) {
+/* RESPONSIVE MEJORADO */
+@media (max-width: 768px) {
+    .page-section {
+        padding: 20px 15px;
+    }
+    
     .calendar-table {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        margin-top: 15px;
     }
     
     .calendar-table th,
     .calendar-table td {
         padding: 8px 6px;
+    }
+    
+    .calendar-table th:nth-child(1),
+    .calendar-table td:nth-child(1) {
+        width: 10%; /* Ronda más estrecha */
+    }
+    
+    .calendar-table th:nth-child(2),
+    .calendar-table td:nth-child(2) {
+        width: 20%; /* País más compacto */
+    }
+    
+    .calendar-table th:nth-child(3),
+    .calendar-table td:nth-child(3) {
+        width: 40%; /* Circuito más espacio */
+    }
+    
+    .calendar-table th:nth-child(4),
+    .calendar-table td:nth-child(4) {
+        width: 15%; /* Fecha compacta */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-table {
+        font-size: 0.75rem;
+    }
+    
+    .calendar-table th,
+    .calendar-table td {
+        padding: 6px 4px;
+    }
+    
+    /* Ocultar columna menos importante en móvil muy pequeño */
+    .calendar-table th:nth-child(2),
+    .calendar-table td:nth-child(2) {
+        display: none; /* Oculta País */
     }
 }
