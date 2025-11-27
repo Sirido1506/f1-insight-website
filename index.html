@@ -20,7 +20,7 @@
   gtag('config', 'G-V5FPEYGFQN');
 </script>
   <!-- Search Console verification -->
-  <meta name="google-site-verification" content="TU_CODIGO_DE_VERIFICACION">
+  <!-- <meta name="google-site-verification" content="TU_CODIGO_DE_VERIFICACION"> -->
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
@@ -33,7 +33,7 @@
       <a class="logo" href="index.html">F1 Insight</a>
 
       <nav class="nav">
-        <ul class="menu">
+        <ul class="menu" id="menu">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="historia.html">Historia</a></li>
           <li><a href="equipos.html">Equipos</a></li>
@@ -73,39 +73,43 @@
 
   <!-- ¿Qué encontrarás aquí? -->
   <section class="introduccion container">
-    <h2>Un sitio para conocer la Fórmula 1 de forma simple y completa</h2><br>
-    <p>F1 Insight reúne información organizada y accesible sobre la Fórmula 1: equipos, pilotos, trazados emblemáticos, tecnología y reglamento para entender cada carrera.</p><br>
+    <h2>Un sitio para conocer la Fórmula 1 de forma simple y completa</h2>
+    <p>F1 Insight reúne información organizada y accesible sobre la Fórmula 1: equipos, pilotos, trazados emblemáticos, tecnología y reglamento para entender cada carrera.</p>
   </section>
 
-  <!-- TARJETAS DE ACCESO RÁPIDO Equipos -->
-  <section class="cards container">
-    <article class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsOQb0Oo8XboSWd6btJQLBRWX35S6kl_j0PWgEIPYyzvo8mJLm4WLg6Ew4soYMn92ZVs&usqp=CAU" alt="Equipos de F1">
-      <h3>Equipos</h3>
-      <p>Perfiles de las escuderías, historia breve y plantillas actuales.</p>
-      <a href="equipos.html" class="card-link">Ver equipos →</a>
-    </article>
-    <!-- Pilotos -->
-    <article class="card">
-      <img src="https://www.record.com.mx/sites/default/files/articulos/2023/12/30/f1_2024.jpg" alt="Pilotos de F1">
-      <h3>Pilotos</h3>
-      <p>Biografías, estadísticas y trayectoria de los protagonistas.</p>
-      <a href="pilotos.html" class="card-link">Ver pilotos →</a>
-    </article>
-    <!-- Circuitos -->
-    <article class="card">
-      <img src="https://e01-elmundo.uecdn.es/em/deportes/f1/2025/circuitos/australia.jpg" alt="Circuitos de F1">
-      <h3>Circuitos</h3>
-      <p>Características de los trazados más emblemáticos del calendario.</p>
-      <a href="circuitos.html" class="card-link">Ver circuitos →</a>
-    </article>
-    <!-- Tecnología -->
-    <article class="card">
-      <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2014/08/20/140820165922_f1_promos_auto_ilustracion_624x351_thinstock.jpg.webp" alt="Tecnología en F1">
-      <h3>Tecnología</h3>
-      <p>Explicación clara sobre aerodinámica, ERS, DRS y más.</p>
-      <a href="tecnologia.html" class="card-link">Ver tecnología →</a>
-    </article>
+  <!-- TARJETAS DE ACCESO RÁPIDO -->
+  <section class="cards-section container">
+    <h2 class="section-title">Explora la Fórmula 1</h2>
+    <div class="cards">
+      <!-- Equipos -->
+      <article class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMsOQb0Oo8XboSWd6btJQLBRWX35S6kl_j0PWgEIPYyzvo8mJLm4WLg6Ew4soYMn92ZVs&usqp=CAU" alt="Equipos de F1">
+        <h3>Equipos</h3>
+        <p>Perfiles de las escuderías, historia breve y plantillas actuales.</p>
+        <a href="equipos.html" class="card-link">Ver equipos →</a>
+      </article>
+      <!-- Pilotos -->
+      <article class="card">
+        <img src="https://www.record.com.mx/sites/default/files/articulos/2023/12/30/f1_2024.jpg" alt="Pilotos de F1">
+        <h3>Pilotos</h3>
+        <p>Biografías, estadísticas y trayectoria de los protagonistas.</p>
+        <a href="pilotos.html" class="card-link">Ver pilotos →</a>
+      </article>
+      <!-- Circuitos -->
+      <article class="card">
+        <img src="https://e01-elmundo.uecdn.es/em/deportes/f1/2025/circuitos/australia.jpg" alt="Circuitos de F1">
+        <h3>Circuitos</h3>
+        <p>Características de los trazados más emblemáticos del calendario.</p>
+        <a href="circuitos.html" class="card-link">Ver circuitos →</a>
+      </article>
+      <!-- Tecnología -->
+      <article class="card">
+        <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2014/08/20/140820165922_f1_promos_auto_ilustracion_624x351_thinstock.jpg.webp" alt="Tecnología en F1">
+        <h3>Tecnología</h3>
+        <p>Explicación clara sobre aerodinámica, ERS, DRS y más.</p>
+        <a href="tecnologia.html" class="card-link">Ver tecnología →</a>
+      </article>
+    </div>
   </section>
 
   <!-- Últimas novedades (texto breve, estático) -->
@@ -127,35 +131,57 @@
     </div>
   </footer>
 
-  <!-- Minimal JS para el menú hamburguesa -->
+  <!-- JavaScript unificado -->
   <script>
+    // MENÚ HAMBURGUESA
     (function () {
       const burger = document.querySelector('.burger');
-      const nav = document.querySelector('.nav');
       const menu = document.querySelector('.menu');
+      const body = document.querySelector('body');
 
       burger.addEventListener('click', () => {
         const expanded = burger.getAttribute('aria-expanded') === 'true';
         burger.setAttribute('aria-expanded', String(!expanded));
         menu.classList.toggle('menu--open');
+        body.classList.toggle('menu-open');
+      });
+
+      // Cerrar menú al hacer clic en enlaces (móvil)
+      document.querySelectorAll('.menu a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 600) {
+            menu.classList.remove('menu--open');
+            burger.setAttribute('aria-expanded', 'false');
+            body.classList.remove('menu-open');
+          }
+        });
+      });
+
+      // Cerrar menú al hacer clic fuera (móvil)
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 600 && menu.classList.contains('menu--open')) {
+          if (!e.target.closest('.nav') && !e.target.closest('.burger')) {
+            menu.classList.remove('menu--open');
+            burger.setAttribute('aria-expanded', 'false');
+            body.classList.remove('menu-open');
+          }
+        }
       });
     })();
+
+    // MEDICIÓN DE TIEMPO DE CARGA
+    window.addEventListener('load', function() {
+      if (performance.getEntriesByType("navigation").length > 0) {
+        const navEntry = performance.getEntriesByType("navigation")[0];
+        const loadTime = navEntry.domContentLoadedEventEnd - navEntry.navigationStart;
+        console.log('Tiempo de carga DOM:', loadTime + 'ms');
+        
+        if (loadTime > 3000) {
+          console.warn('⚠️ El tiempo de carga supera los 3 segundos');
+          console.log('Recomendaciones: comprimir imágenes, minificar CSS/JS, usar CDN');
+        }
+      }
+    });
   </script>
-<script>
-// Medición de tiempo de carga
-window.addEventListener('load', function() {
-  if (performance.getEntriesByType("navigation").length > 0) {
-    const loadTime = performance.getEntriesByType("navigation")[0].domContentLoadedEventEnd;
-    console.log('Tiempo de carga DOM:', loadTime + 'ms');
-    
-    if (loadTime > 3000) {
-      console.warn('⚠️ El tiempo de carga supera los 3 segundos');
-      // Optimizar: comprimir imágenes, minificar CSS/JS, usar CDN
-    }
-  }
-});
-</script>
 </body>
 </html>
-
-
