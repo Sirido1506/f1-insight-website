@@ -281,21 +281,32 @@ body {
     z-index: 10000;
   }
 
+  @media (max-width: 600px) {
   .menu.menu--open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 70px;
-    right: 20px;
-    background: #111;
-    padding: 15px;
-    border-radius: 8px;
-    gap: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    z-index: 9999;
-    min-width: 200px;
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;    /* ← fixed en lugar de absolute */
+    top: 70px !important;
+    right: 20px !important;
+    background: #111 !important;
+    padding: 15px !important;
+    border-radius: 8px !important;
+    gap: 12px !important;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
+    z-index: 10000 !important;
+    min-width: 200px !important;
   }
-
+  
+  .menu.menu--open a {
+    color: white !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+  }
+  
+  .menu.menu--open a:hover {
+    background: #333 !important;
+  }
+}
   /* Fondo oscuro cuando el menú está abierto */
   body.menu-open::before {
     content: '';
@@ -335,3 +346,4 @@ body {
         text-align: center;
     }
 }
+
