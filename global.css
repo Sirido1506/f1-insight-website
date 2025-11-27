@@ -349,29 +349,34 @@ body {
     }
 
 }
-/* FIX PARA MÓVIL - HEADER/FOOTER */
-@media (max-width: 768px) {
+/* FIX ESPECÍFICO PARA OPERA MOBILE */
+@media (max-width: 768px) and (orientation: portrait) {
+  .header,
+  .footer {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
   .header .container,
   .footer .container {
-    max-width: 100% !important;
     width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
     margin: 0 !important;
-    padding: 0 20px !important;
+    padding: 14px 5% !important;
     box-sizing: border-box !important;
   }
   
-  .header,
-  .footer {
-    width: 100% !important;
-    max-width: 100% !important;
-    position: relative;
-    left: 0;
-    right: 0;
-  }
-  
-  /* Prevenir scroll horizontal */
+  /* Prevenir problemas de viewport en Opera */
   body {
     overflow-x: hidden;
     width: 100%;
+    position: relative;
   }
 }
