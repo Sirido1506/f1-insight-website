@@ -42,3 +42,15 @@
         padding: 8px 6px;
     }
 }
+/* Header y Footer full-width solo en calendario */
+.header,
+.footer {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+.header .container,
+.footer .container {
+    max-width: none !important;
+    width: 100% !important;
+}
