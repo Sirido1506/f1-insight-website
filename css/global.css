@@ -245,6 +245,7 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -253,27 +254,29 @@ body {
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-content p {
-        font-size: 0.95rem;
-    }
-    
-    .btn {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 600px) {
+  /* HEADER RESPONSIVE */
   .header-inner {
     gap: 12px;
   }
 
+  /* MENÚ MÓVIL - OCULTAR POR DEFECTO */
   .nav .menu {
-    display: none;
+    display: none !important; /* ← FORZAR ocultar en móvil */
   }
 
   .burger {
@@ -281,11 +284,11 @@ body {
     z-index: 10000;
   }
 
-  @media (max-width: 600px) {
-  .menu.menu--open {
+  /* MENÚ ABIERTO - ESTILOS MÓVIL */
+  .nav .menu.menu--open {
     display: flex !important;
     flex-direction: column !important;
-    position: fixed !important;    /* ← fixed en lugar de absolute */
+    position: fixed !important;
     top: 70px !important;
     right: 20px !important;
     background: #111 !important;
@@ -293,21 +296,42 @@ body {
     border-radius: 8px !important;
     gap: 12px !important;
     box-shadow: 0 8px 25px rgba(0,0,0,0.3) !important;
-    z-index: 10000 !important;
+    z-index: 9999 !important;
     min-width: 200px !important;
+    max-width: 250px !important;
   }
-  
-  .menu.menu--open a {
+
+  /* ESTILOS DE ENLACES EN MÓVIL */
+  .nav .menu.menu--open li {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .nav .menu.menu--open a {
     color: white !important;
-    padding: 8px 12px !important;
+    padding: 10px 15px !important;
+    display: block !important;
+    text-align: left !important;
     border-radius: 4px !important;
+    transition: background 0.3s !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
-  
-  .menu.menu--open a:hover {
+
+  .nav .menu.menu--open a:hover {
     background: #333 !important;
   }
-}
-  /* Fondo oscuro cuando el menú está abierto */
+
+  /* Botón Contacto en móvil */
+  .nav .menu.menu--open .btn-small {
+    background: #e10600 !important;
+    color: white !important;
+    text-align: center !important;
+    margin: 5px 0 !important;
+  }
+
+  /* FONDO OSCURO CUANDO MENÚ ABIERTO */
   body.menu-open::before {
     content: '';
     position: fixed;
@@ -315,16 +339,18 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.5);
     z-index: 9998;
   }
 
+  /* FOOTER RESPONSIVE */
   .footer-inner {
     flex-direction: column;
     gap: 8px;
     text-align: center;
   }
 
+  /* TARJETAS RESPONSIVE */
   .cards {
     grid-template-columns: 1fr;
     gap: 15px;
@@ -332,18 +358,19 @@ body {
 }
 
 @media (max-width: 480px) {
-    .container {
-        width: 95%;
-    }
-    
-    .hero-cta {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
+  .container {
+    width: 95%;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
+
 
