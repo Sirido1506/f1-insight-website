@@ -29,9 +29,16 @@
 
 .calendar-table tr:hover {
     background: #fafafa;
-
 }
-.header .container,
-.footer .container {
-    max-width: none !important; /* ← Esto arregla header/footer */
+
+/* RESPONSIVE para tabla */
+@media (max-width: 600px) {
+    .calendar-table {
+        font-size: 0.9rem;
+    }
+    
+    .calendar-table th,
+    .calendar-table td {
+        padding: 8px 6px;
+    }
 }
