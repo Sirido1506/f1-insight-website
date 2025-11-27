@@ -124,7 +124,35 @@ body {
     border-radius: 6px;
     gap: 10px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+     z-index: 9999 !important;
   }
+  /* PREVENIR QUE EL CONTENIDO TAPE EL MENÚ */
+@media (max-width: 600px) {
+    .nav .menu {
+        display: none;
+    }
+    
+    .burger {
+        display: inline-block;
+        z-index: 10000; /* ← Burger por encima de todo */
+    }
+    
+    /* Cuando el menú está abierto, oscurecer el fondo */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    body.menu-open::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 9998;
+    }
+}
 
   .footer-inner {
     flex-direction: column;
@@ -324,4 +352,5 @@ body {
         width: 100%;
         text-align: center;
     }
+
 }
